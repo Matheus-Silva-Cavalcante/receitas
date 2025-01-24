@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./style/telaprincipal.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/popups.css">
+    
+    <title>Só Receitas</title>
+
+    <script type="module">
+        import {iniciarView} from "./js/index.js"
+        iniciarView('receita')
+    </script>
+</head>
+<body>
+    <!-- <div class="div-img-fundo">
+        <img class="img-fundo" src="./img/pngtree-healthy-foods-round-up-at-the-table-image_13024003 3.png" alt="Foto de ingrediente">
+    </div> -->
+    
+    <section id="pgInicial" class="img-tela-principal" >
+        <div class="tela-principal">
+            <nav>
+                <div class="container-nav">
+                    <div class="titulo-logo">
+                        Só Receitas
+                    </div>
+        
+                    <div class="nav-link">
+                        <a href="./ingrediente/ingrediente.html">Ingrediente</a>
+        
+                        <a href="./categoria/categoria.html">Categoria</a>
+        
+                        <a href="./unidadeMedida/unidadeMedida.html">Unidade de Medida</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="are-busca">
+                <div class="busca-mobile">
+                    <input class="campo-busca busca-filtro__style" type="text" placeholder="Qual receita você está procurando?">
+
+                    <button class="btn-busca-mobile icon-lupa"></button>
+                </div>
+                
+                <div class="busca-filtro">
+                    <div class="busca">
+                        <input class="campo-busca busca-filtro__style" type="text" placeholder="Qual receita você está procurando?">
+                        
+                        <button class="btn-busca icon-lupa"></button>
+                    </div>
+
+                    <select class="filtro busca-filtro__style" >
+                        <option>Categoria</option>
+                        <option>Categoria</option>
+                        <option>Categoria</option>
+                    </select>
+
+                    <select class="filtro busca-filtro__style" >
+                        <option>tempo de preparo</option>
+                        <option>tempo de preparo</option>
+                        <option>tempo de preparo</option>
+                    </select>
+
+                    <select class="filtro busca-filtro__style">
+                        <option>dificuldade</option>
+                        <option>dificuldade</option>
+                        <option>dificuldade</option>
+                    </select>
+
+                    <button id="btnAdicionerReceita" class="btn-ad-receita icon-plus"></button>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="listas-receitas">
+                    <div class="receitas">
+                        <div id="abrirReceita" class="botao-selecionavel receita">
+                            <div class="area-btn-editar-excluir">
+                                <button class="btn-editar-excluir icon-editor"></button>
+                                <button class="btn-editar-excluir icon-cross"></button>
+                            </div>
+
+                            <div class="receite-img">
+                                <img class="img-livro-receita" src="../receitas/img/livro-de-receitas.png" alt="Imagem de um livro de receita">
+                            </div>
+
+                            <div class="receita-informacao">
+                                <div class="receita-informacao-titulo">
+                                    Brigadeiro de Colher
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/jantar.png" alt="Imagem de telheres">
+                                    Aniversário
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/relogio.png" alt="Imagem de um relogio">
+                                    15m
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/grafico-de-barras.png" alt="Grafico de barra de dificuldade">
+                                    Dificuldade: 1-Muito facil
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/chapeu-de-chef.png" alt="Imagem de chapeu de chef">
+                                    Click para saber mais
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="botao-selecionavel receita">
+                            <div class="area-btn-editar-excluir">
+                                <button class="btn-editar-excluir icon-editor"></button>
+                                <button class="btn-editar-excluir icon-cross"></button>
+                            </div>
+
+                            <div class="receite-img">
+                                <img class="img-livro-receita" src="../receitas/img/livro-de-receitas.png" alt="Imagem de um livro de receita">
+                            </div>
+
+                            <div class="receita-informacao">
+                                <div class="receita-informacao-titulo">
+                                    Brigadeiro de Colher
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/jantar.png" alt="Imagem de telheres">
+                                    Aniversário
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/relogio.png" alt="Imagem de um relogio">
+                                    15m
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/grafico-de-barras.png" alt="Grafico de barra de dificuldade">
+                                    Dificuldade: 1-Muito facil
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/chapeu-de-chef.png" alt="Imagem de chapeu de chef">
+                                    Click para saber mais
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="receita">
+                            <div class="area-btn-editar-excluir">
+                                <button class="btn-editar-excluir icon-editor"></button>
+                                <button class="btn-editar-excluir icon-cross"></button>
+                            </div>
+
+                            <div class="receite-img">
+                                <img class="img-livro-receita" src="../receitas/img/livro-de-receitas.png" alt="Imagem de um livro de receita">
+                            </div>
+
+                            <div class="receita-informacao">
+                                <div class="receita-informacao-titulo">
+                                    Brigadeiro de Colher
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/jantar.png" alt="Imagem de telheres">
+                                    Aniversário
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/relogio.png" alt="Imagem de um relogio">
+                                    15m
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/grafico-de-barras.png" alt="Grafico de barra de dificuldade">
+                                    Dificuldade: 1-Muito facil
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/chapeu-de-chef.png" alt="Imagem de chapeu de chef">
+                                    Click para saber mais
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="receita">
+                            <div class="area-btn-editar-excluir">
+                                <button class="btn-editar-excluir icon-editor"></button>
+                                <button class="btn-editar-excluir icon-cross"></button>
+                            </div>
+
+                            <div class="receite-img">
+                                <img class="img-livro-receita" src="../receitas/img/livro-de-receitas.png" alt="Imagem de um livro de receita">
+                            </div>
+
+                            <div class="receita-informacao">
+                                <div class="receita-informacao-titulo">
+                                    Brigadeiro de Colher
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/jantar.png" alt="Imagem de telheres">
+                                    Aniversário
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/relogio.png" alt="Imagem de um relogio">
+                                    15m
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/grafico-de-barras.png" alt="Grafico de barra de dificuldade">
+                                    Dificuldade: 1-Muito facil
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/chapeu-de-chef.png" alt="Imagem de chapeu de chef">
+                                    Click para saber mais
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="receita">
+                            <div class="receite-img">
+                                <img class="img-livro-receita" src="../receitas/img/livro-de-receitas.png" alt="Imagem de um livro de receita">
+                            </div>
+
+                            <div class="receita-informacao">
+                                <div class="receita-informacao-titulo">
+                                    Brigadeiro de Colher
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/jantar.png" alt="Imagem de telheres">
+                                    Aniversário
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/relogio.png" alt="Imagem de um relogio">
+                                    15m
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/grafico-de-barras.png" alt="Grafico de barra de dificuldade">
+                                    Dificuldade: 1-Muito facil
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/chapeu-de-chef.png" alt="Imagem de chapeu de chef">
+                                    Click para saber mais
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="receita">
+                            <div class="receite-img">
+                                <img class="img-livro-receita" src="../receitas/img/livro-de-receitas.png" alt="Imagem de um livro de receita">
+                            </div>
+
+                            <div class="receita-informacao">
+                                <div class="receita-informacao-titulo">
+                                    Brigadeiro de Colher
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/jantar.png" alt="Imagem de telheres">
+                                    Aniversário
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/relogio.png" alt="Imagem de um relogio">
+                                    15m
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/grafico-de-barras.png" alt="Grafico de barra de dificuldade">
+                                    Dificuldade: 1-Muito facil
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/chapeu-de-chef.png" alt="Imagem de chapeu de chef">
+                                    Click para saber mais
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="receita">
+                            <div class="receite-img">
+                                <img class="img-livro-receita" src="../receitas/img/livro-de-receitas.png" alt="Imagem de um livro de receita">
+                            </div>
+
+                            <div class="receita-informacao">
+                                <div class="receita-informacao-titulo">
+                                    Brigadeiro de Colher
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/jantar.png" alt="Imagem de telheres">
+                                    Aniversário
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/relogio.png" alt="Imagem de um relogio">
+                                    15m
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/grafico-de-barras.png" alt="Grafico de barra de dificuldade">
+                                    Dificuldade: 1-Muito facil
+                                </div>
+
+                                <div class="receita-informacao-texto">
+                                    <img class="receita-informacao__img" src="../receitas/img/chapeu-de-chef.png" alt="Imagem de chapeu de chef">
+                                    Click para saber mais
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pgSecundaria" class="popup fechado">
+        <div class="tela-secundaria-titulo">
+            Receita
+        </div>
+
+        <div class="tela-secundaria-mobile-titulo">
+            Receita
+        </div>
+
+        <div class="container-tela-secundaria">
+            <div class="tela-secundaria-btn-img">
+                <div class="tela-secundaria-imagem">
+                    <img class="tela-secundaria-img" src="./img/livro-de-receitas.png" alt="Imagem de um livro de receita">
+                </div>
+
+                <div class="tela-secundaria-botoes">
+                    <button id="telaSecundariaAdReceita" class="tela-secundaria-btn-acao">Adicionar Receita</button>
+                    <button id="btnVoltarPgPrincipal" class="tela-secundaria-btn-acao">Voltar</button>
+                </div>
+            </div>
+
+            <div class="tela-secundaria-receita">
+                <div class="tela-secundaria-receita-titulo">Brigadeiro de colher</div>
+
+                <div class="tela-secundaria-receita-detalhes">
+                    <div class="receita-detalhes">
+                        <img class="img-tela-secundaria" src="./img/jantar.png" alt="">
+
+                        <div class="receita-detalhe">
+                            Sobremesa
+                        </div>
+                    </div>
+
+                    <div class="receita-detalhes">
+                        <img class="img-tela-secundaria" src="./img/descricao.png" alt="">
+
+                        <div class="receita-detalhe">
+                            Descrição: Se você é fã de brigadeiro e adora se deliciar com essa sobremesa cremosa e irresistível, você veio ao lugar certo. Prepare-se para saborear o autêntico brigadeiro brasileiro em uma versão que pode ser apreciada diretamente da colher.
+                        </div>
+                    </div>
+
+                    <div class="receita-detalhes">
+                        <img class="img-tela-secundaria" src="./img/relogio.png" alt="">
+
+                        <div class="receita-detalhe">
+                            10m
+                        </div>
+                    </div>
+
+                    <div class="receita-detalhes">
+                        <img class="img-tela-secundaria" src="./img/grafico-de-barras.png" alt="">
+
+                        <div class="receita-detalhe">
+                            Dificuldade: 1-Muito-Facil
+                        </div>
+                    </div>
+
+                    <div class="receita-detalhes">
+                        <img class="img-tela-secundaria" src="./img/chapeu-de-chef.png" alt="">
+
+                        <div class="receita-detalhe">
+                            Modo de preparo: Coloque a manteiga em uma panela e espere derreter, depois Coloque o leite condesado e o chocolate em pó e deixe em fogo médio, deixe até quando estiver soltando da panela.
+                        </div>
+                    </div>
+
+                    <div class="receita-detalhes">
+                        <img class="img-tela-secundaria" src="./img/ingrediente.png" alt="">
+
+                        <div class="receita-detalhe">
+                            Ingrediente: 1 caixa de leite condensado, 1 caixa de creme de leite, 4 colheres de sopa de chocolate em pó, 1 colher de sopa de manteiga
+                        </div>
+                    </div>
+
+                    <div class="receita-detalhes">
+                        <img class="img-tela-secundaria" src="./img/jantar.png" alt="">
+
+                        <div class="receita-detalhe">
+                            Descrição: Se você é fã de brigadeiro e adora se deliciar com essa sobremesa cremosa e irresistível, você veio ao lugar certo. Prepare-se para saborear o autêntico brigadeiro brasileiro em uma versão que pode ser apreciada diretamente da colher.
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

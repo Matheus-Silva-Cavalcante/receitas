@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Receita</title>
+    <link rel="stylesheet" href="./style/cadastroReceita.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <script type="module">
+        import {iniciarView} from './js/index.js'
+        iniciarView('cadastroReceita')
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="titulo">
+            Nova Receita
+        </div>
+
+        <div class="area-cadastro">
+            <div class="cadastro">
+                <label for="inputNomeReceita">
+                    Nome Receita :
+                </label>
+                
+                <input class="input-textarea-select" id="inputNomeReceita" type="text" placeholder="Qual vai ser o nome da receita?">
+
+                <div class="alerta-campo-vazio" style="display: none;">
+                    O nome da Receita é obrigatória!
+                    <div class="icon-emoji-rindo"></div>
+                </div>
+            </div>
+
+            <div class="cadastro cadastro-textarea">
+                <label for="textareaDescricao">
+                    Descrição
+                </label>
+
+                <textarea class="input-textarea-select" id="textareaDescricao" placeholder="Descrição da receita. Opcional."></textarea>
+            </div>
+
+            <div class="cadastro">
+                <label for="cadastroCategoria">
+                    Categoria :
+                </label>
+                
+                <select class="input-textarea-select" id="cadastroCategoria">
+                    <option>Sobremesa</option>
+                    <option>Sobremesa</option>
+                    <option>Sobremesa</option>
+                </select>
+            </div>
+
+            <div class="cadastro">
+                <div class="cadastro-dividido">
+                    <div class="cadastro">
+                        <label for="cadastroTempoPreparo">
+                            Tempo de Preparo :
+                        </label>
+
+                        <input class="input-textarea-select" id="cadastroTempoPreparo" type="number">
+
+                        <div class="alerta-campo-vazio" style="display: none;">
+                            O tempo de prepara é importante!
+                            <div class="icon-emoji-rindo"></div>
+                        </div>
+                    </div>
+
+                    <div class="cadastro">
+                        <label for="cadastroDificuldade">
+                            Dificuldade :
+                        </label>
+
+                        <select class="input-textarea-select" id="cadastroDificuldade">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cadastro ">
+                <div class="area-ingredientes">
+                    
+                    <div class="cadastro-dividido divisor-ingrediente">
+                        <button id="removerIngredienteAdicionado" class="btn-cancelar-ingrediente icon-cross"></button>
+                        <div class="cadastro">
+                            <label for="cadastroIngrediente">
+                                Ingrediente :
+                            </label>
+
+                            <select class="input-textarea-select" id="cadastroIngrediente">
+                                <option>Manteiga</option>
+                                <option>Manteiga</option>
+                                <option>Manteiga</option>
+                                <option>Manteiga</option>
+                            </select>
+                        </div>
+
+                        <div class="unidade-quantidade">
+                            <div class="cadastro cadastro-limitar-inputs">
+                                <label for="cadastroUnMedida">
+                                    Un. Medida :
+                                </label>
+        
+                                <select class="input-textarea-select " id="cadastroUnMedida">
+                                    <option>Caixa</option>
+                                    <option>Colher de sopa</option>
+                                    <option>Caixa</option>
+                                </select>
+                            </div>
+        
+                            <div class="cadastro cadastro-limitar-inputs">
+                                <label for="cadastroQuantidade">
+                                    Quantidade :
+                                </label>
+        
+                                <input class="input-textarea-select" id="cadastroQuantidade" type="number">
+        
+                                <div class="alerta-campo-vazio" style="display: none;">
+                                    Qual é a quantidade de ingrediente?
+                                    <div class="icon-emoji-rindo"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cadastro">
+                            <label for="cadastroObservacao">
+                                Observação :
+                            </label>
+
+                            <input class="input-textarea-select" id="cadastroObservacao" type="text" placeholder="Texto curto, opcional.">
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="adicionar-ingrediente">
+                    <button id="adMaisIngrediente" class="btn-adicionar-ingrediente">
+                        Adicionar mais Ingrediente
+                    </button>
+                </div>
+            </div>
+
+            <div class="cadastro">
+                <label for="cadastroModoPreparo">
+                    Modo de Preparo :
+                </label>
+
+                <textarea class="input-textarea-select" id="cadastroModoPreparo" placeholder="Nos conte como prepara essa receita."></textarea>
+
+                <div class="alerta-campo-vazio" style="display: none;">
+                    Conte como preparar a receita!
+                    <div class="icon-emoji-rindo"></div>
+                </div>
+            </div>
+
+            <div class="area-btn-acao">
+                <button class="btn-acoa">Salvar Receita</button>
+
+                <button id="btnCancelarReceita" class="btn-acoa">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/popups.css">
+    <link rel="stylesheet" href="../style/interfaceCatIngUn.css">
+
+    <title>Categoria</title>
+
+    <script type="module">
+        import {iniciarView} from "../js/index.js"
+        iniciarView('categoria')
+    </script>
+</head>
+<body>
+    <section class="tela-principal">
+        <div class="tela-principal-area-titulo">
+            <div class="area-titulo-btn">
+                <button id="btnCategoriaVoltarPgPrincipal" class="btn-area-titulo-btn icon-setavoltar"></button>
+                Categoria
+            </div>
+        </div>
+
+        <div class="tela-principal-area-busca-btn">
+            <div class="area-busca-btn">
+                <div class="busca">
+                    <input class="input-busca" type="text" placeholder="Qual categoria você procura?">
+                    <button class="btn-busca icon-lupa"></button>
+                </div>
+
+                <button id="btnAdCategoria" class="btn-ad-ingrediente icon-plus"></button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container-conteudo">
+                <div class="botao-selecionavel conteudo">
+                    <div class="area-btn-editar-excluir">
+                        <button class="btn-editar-excluir botoes-acao icon-editor"></button>
+                        <button class="btn-editar-excluir botoes-acao icon-cross"></button>
+                    </div>
+
+                    <div class="conteudo-informacao ">
+                        <div class="conteudo-informacao-icon-titulo">
+                            <img class="img-icons" src="../img/jantar.png" alt="Foto de prato">
+                            Categoria :
+                        </div>
+
+                        Sobremesa
+                    </div>
+
+                    <div class="conteudo-informacao">
+                        <div class="conteudo-informacao-icon-titulo">
+                            <img class="img-icons" src="../img/descricao.png" alt="Foto de documento de descricao">
+                            Descrição :
+                        </div>
+
+                        Fácil e Rápido
+                    </div>
+                </div>
+
+                <div class="botao-selecionavel conteudo">
+                    <div class="area-btn-editar-excluir">
+                        <button class="btn-editar-excluir icon-editor"></button>
+                        <button class="btn-editar-excluir icon-cross"></button>
+                    </div>
+
+                    <div class="conteudo-informacao ">
+                        <div class="conteudo-informacao-icon-titulo">
+                            <img class="img-icons" src="../img/jantar.png" alt="Foto de prato">
+                            Categoria :
+                        </div>
+
+                        Aniversário
+                    </div>
+
+                    <div class="conteudo-informacao">
+                        <div class="conteudo-informacao-icon-titulo">
+                            <img class="img-icons" src="../img/descricao.png" alt="Foto de documento de descricao">
+                            Descrição :
+                        </div>
+
+                        Diversão para toda a criançada
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+    </section>
+
+    <section class="popup fechado" >
+        <div class="popup-container ">
+            <div class="popup-container-titulo tela-secundaria-titulo">
+                Adicionar Categoria
+            </div>
+
+            <div class="popup-container-cadastro">
+                <div class="cadastro">
+                    <label for="nomeCategoria">
+                        Nome :
+                    </label>
+
+                    <input id="nomeCategoria" class="input-cadastro" type="text" placeholder="Qual vai ser o nome da Categoria?">
+
+                    <div class="alerta-campo-vazio" style="display: none;">
+                        A categoria não pode ser salva sem um nome.
+                        <div class="icon-emoji-rindo"></div>
+                    </div>
+                </div>
+
+                <div class="cadastro">
+                    <label for="descricaoCategoria">
+                        Descrição :
+                    </label>
+
+                    <input class="input-cadastro" type="text" id="descricaoCategoria" placeholder="Texto curto opcional.">
+                </div>
+
+                <div class="cadastro-btn-acao">
+                    <button class="btn-acao">
+                        Salvar
+                    </button>
+
+                    <button id="btnCancelarCategoria" class="btn-acao">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
