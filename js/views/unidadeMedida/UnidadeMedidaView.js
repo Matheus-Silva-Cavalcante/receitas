@@ -1,9 +1,11 @@
 import { addEventListenerGlobal } from "../../core/helpers/eventsHelper.js";
+import Selecionavel from "../../core/helpers/Selecionavel.js";
 import { unidadeDeMedidaService } from "../../core/services/services.js";
 import { abrirPopup, fecharPopup } from "../popup.js";
 
 export default class UnidadeMedidaView{
-    _unidadeMedidaService
+    _unidadeMedidaService;
+    _listaSelecionado;
 
     constructor(unidadeMedidaService){
         this._unidadeMedidaService = unidadeMedidaService
@@ -16,6 +18,16 @@ export default class UnidadeMedidaView{
     }
 
     _bindEvents(){
+        this._listaSelecionado = new Selecionavel(
+            ".botao-selecionavel",
+            () => {
+                document.querySelectorAll(".btn-editar-excluir").forEach(btn => btn.removeAttribute("disabled"));
+            },
+            () => {
+                document.querySelectorAll(".btn-editar-excluir").forEach(btn => btn.setAttribute("disabled", ""));
+            }
+        )
+
         addEventListenerGlobal('click', '#btnUnMedidaVoltarPgPrincipal', () => this._btnVoltarPgPrincipal());
 
         addEventListenerGlobal('click', '#btnAdCategoria', () => this._btnAdUnidadeMedida());
@@ -46,8 +58,8 @@ export default class UnidadeMedidaView{
             listarUnidadeMedida.innerHTML += `
                 <div class="botao-selecionavel conteudo" data-id="${unidadeMedida.id}">
                     <div class="area-btn-editar-excluir">
-                        <button class="btn-editar-excluir botoes-acao icon-editor"></button>
-                        <button class="btn-editar-excluir botoes-acao icon-cross"></button>
+                        <button class="botoes-acao btn-editar-excluir icon-editor"></button>
+                        <button class="botoes-acao btn-editar-excluir icon-cross"></button>
                     </div>
 
                     <div class="conteudo-informacao ">

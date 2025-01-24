@@ -159,7 +159,7 @@ body{
     gap: .5rem;
 }
 
-.btn-editar-excluir{
+.botoes-acao{
     width: 2.5rem;
     height: 2.5rem;
     border: none;
@@ -169,11 +169,11 @@ body{
     transition: .5s;
 }
 
-.btn-editar-excluir:hover{
+.botoes-acao:hover{
     background-color: #b9a396;
 }
 
-.botoes-acao:disabled{
+.btn-editar-excluir:disabled{
     opacity: .3;
     cursor: auto;
 }
